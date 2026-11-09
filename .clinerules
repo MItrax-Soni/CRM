@@ -22,3 +22,4 @@ This project is **Cognitive CRM (Enterprise Intelligence Platform)** built with 
 Before completing any task:
 1. `npm run build` must pass with zero TypeScript errors and zero bundle warnings.
 2. Ensure state updates propagate reactively across all connected views.
+
