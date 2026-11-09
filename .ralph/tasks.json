@@ -1,0 +1,29 @@
+{
+  "project": "Cognitive CRM - Enterprise Intelligence Platform",
+  "version": "1.0.0",
+  "current_iteration": 2,
+  "status": "ready",
+  "tasks": [
+    {
+      "id": "stitch-to-react",
+      "title": "Build full-fledged website from Stitch design 8736786426951694813",
+      "status": "completed",
+      "verified": true,
+      "verification_cmd": "npm run build"
+    },
+    {
+      "id": "github-sync",
+      "title": "Push initial codebase to GitHub (MItrax-Soni/CRM)",
+      "status": "completed",
+      "verified": true,
+      "verification_cmd": "git status"
+    },
+    {
+      "id": "agent-extension-harness",
+      "title": "Set up Roo Code, Ralph Loop, and CodeRabbit configurations",
+      "status": "completed",
+      "verified": true,
+      "verification_cmd": "npm run build"
+    }
+  ]
+}

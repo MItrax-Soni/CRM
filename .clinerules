@@ -1,0 +1,24 @@
+# Roo Code / Cline Architecture & Engineering Rules for Cognitive CRM
+
+## Project Overview
+This project is **Cognitive CRM (Enterprise Intelligence Platform)** built with Vite, React 19, TypeScript, and Tailwind CSS, based on Stitch Project ID `8736786426951694813` ("Luminous Executive Intelligence").
+
+## Architecture & Code Conventions
+- **Component Hierarchy**:
+  - `src/views/`: Primary views (`PipelineDashboardView`, `LeadFeedScoringView`, `MeetingDebriefView`, `ContactDossierCopilotView`, `AnalyticsView`, `SettingsView`).
+  - `src/components/`: Shared app components (`Sidebar`, `TopNav`, `CommandPaletteModal`, `CopilotDrawer`, `NewLeadModal`, `ToastContainer`).
+  - `src/context/`: `CrmContext.tsx` contains global state (deals, CRM field updates, action items, telemetry signals, copilot messages).
+  - `src/types.ts`: TypeScript contracts and domain models.
+- **Styling**:
+  - Tailwind CSS with exact design tokens defined in `tailwind.config.js`.
+  - Dark mode (`class="dark"` on `<html>`).
+  - Color palette: Canvas background `#0f131c`, Primary violet `#7c3aed`, Cyber cyan `#4cd7f6`, Emerald metric `#4edea3`, Surface container `#1c1f29`.
+  - Glassmorphic panels: `.glass-panel`, `.glass-panel-elevated`, `.ai-glow`, `.emerald-glow`, `.neon-purple-glow`.
+  - Fonts: Headlines use Plus Jakarta Sans (`font-headline`), Body & Data metrics use Inter (`font-body`), Monospace for financial figures and timestamps (`font-mono`).
+- **Icons**:
+  - Google Material Symbols Outlined (`<span className="material-symbols-outlined">icon_name</span>`).
+
+## Verification Commands
+Before completing any task:
+1. `npm run build` must pass with zero TypeScript errors and zero bundle warnings.
+2. Ensure state updates propagate reactively across all connected views.

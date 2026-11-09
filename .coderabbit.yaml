@@ -1,0 +1,42 @@
+# CodeRabbit Configuration for Cognitive CRM Platform
+# Schema: https://coderabbit.ai/integrations/code-rabbit-overrides.v2.json
+
+language: "en-US"
+tone_instructions: "Provide succinct, constructive, senior-level code reviews focusing on type safety, component modularity, performance optimizations, and design system fidelity."
+
+reviews:
+  profile: "assertive"
+  request_changes_workflow: false
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+
+chat:
+  auto_reply: true
+
+path_filters:
+  - "!dist/**"
+  - "!node_modules/**"
+  - "!package-lock.json"
+  - "!.git/**"
+
+instructions:
+  - path: "src/**/*.tsx"
+    instructions: |
+      - Verify React 19 / TypeScript best practices (no unused variables or 'any' types).
+      - Ensure proper state management via CrmContext without unnecessary re-renders.
+      - Check that Material Symbols Outlined icons and Tailwind classes adhere to the Luminous Executive Intelligence design system.
+      - Verify accessibility (keyboard navigation for command palette, proper labels for buttons).
+
+  - path: "src/context/CrmContext.tsx"
+    instructions: |
+      - Ensure immutable state updates for deals, action items, and telemetry feeds.
+      - Keep business logic cleanly separated and reusable across views.
+
+  - path: "tailwind.config.js"
+    instructions: |
+      - Do not remove or alter core semantic tokens (surface-container, primary, secondary, tertiary) without justification.
